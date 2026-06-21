@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Consultation | BXLLY Digital</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<div class="consultation-container">
+
+    <img src="assets/img/bxlly_digital_logo.png/Bxlly_Digital_Logo.png"
+         class="consultation-logo"
+         alt="BXLLY Digital Logo">
+
+    <h1>Let's Build Your Website</h1>
+
+    <p>
+        Complete the consultation form below. I'll review your project,
+        contact you within 24 hours, and provide a custom quote.
+    </p>
+
+    <form action="https://formspree.io/f/mwvdeazd" method="POST">
+
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone">
+
+        <label>Business Name</label>
+        <input type="text" name="business">
+
+        <label>What type of website do you need?</label>
+
+        <select name="website_type">
+
+            <option>Business Website</option>
+            <option>Music Website</option>
+            <option>Portfolio</option>
+            <option>E-Commerce Store</option>
+            <option>Restaurant</option>
+            <option>Booking Website</option>
+
+        </select>
+
+        <label>Do you already own a domain?</label>
+
+        <select name="domain">
+
+            <option>Yes</option>
+            <option>No</option>
+
+        </select>
+
+        <label>Do you need hosting?</label>
+
+        <select name="hosting">
+
+            <option>Yes</option>
+            <option>No</option>
+
+        </select>
+
+        <label>Estimated Budget</label>
+
+        <select name="budget">
+
+            <option>Under $500</option>
+            <option>$500-$1,000</option>
+            <option>$1,000-$2,500</option>
+            <option>$2,500+</option>
+
+        </select>
+
+        <label>Describe your vision</label>
+
+        <textarea
+  name="message"
+  rows="8"
+  placeholder="Tell me everything about your dream website..."
+  required></textarea>
+
+<input type="hidden"
+  name="_next"
+  value="http://127.0.0.1:5500/thankyou.html">
+
+<button type="submit">
+  Submit Consultation
+</button>
+
+
+</form>
+    
+
+</div>
+
+</body>
+
+</html>
