@@ -1,10 +1,4 @@
-/**
-* Template Name: SnapFolio
-* Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-* Updated: Jul 21 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
@@ -227,3 +221,52 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+/* =========================================
+   BXLLY POP EFFECTS
+   Paste at bottom of main.js
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+  /* mouse glow */
+  const glow = document.createElement("div");
+  glow.className = "mouse-glow";
+  document.body.appendChild(glow);
+
+  document.addEventListener("mousemove", function (e) {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  });
+
+  /* scroll reveal */
+  const revealItems = document.querySelectorAll(
+    ".bxlly-hero, .founder-card, .founder-content, .bxlly-showcase, .service-item, .resume-item"
+  );
+
+  revealItems.forEach(function (item) {
+    item.classList.add("reveal-up");
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealItems.forEach(function (item) {
+    observer.observe(item);
+  });
+
+  /* floating particles */
+  for (let i = 0; i < 18; i++) {
+    const particle = document.createElement("span");
+    particle.className = "bxlly-particle";
+
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDelay = Math.random() * 10 + "s";
+    particle.style.animationDuration = 8 + Math.random() * 10 + "s";
+
+    document.body.appendChild(particle);
+  }
+});
